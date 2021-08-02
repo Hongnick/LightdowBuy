@@ -43,8 +43,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        
+        
+        // 存入UserDefault可以在下次開啟App時保有原本資料
         Tool.shared.writeUserDefault(with: PropertyKeys.cart, and: CartManager.shared.shoppingcart)
-        Tool.shared.writeUserDefault(with: PropertyKeys.favoriteList, and: FavoriteListManager.shared.favoriteList)
+       
     }
 
 
