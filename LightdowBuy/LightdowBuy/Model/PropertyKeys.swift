@@ -12,5 +12,5 @@ struct PropertyKeys {
     static let favoriteList = "favoriteList"
     static let shoppingcartController = "ShoppingcartTableViewController"
     static let HomePageCollectionViewCell = ""
-  //  static let ConfirmOrderViewController = "ConfirmOrderViewController"
+ 
 }

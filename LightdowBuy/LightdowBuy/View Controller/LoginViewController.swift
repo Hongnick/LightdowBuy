@@ -181,8 +181,7 @@ class LoginViewController: UIViewController {
         customView.clipsToBounds = true
   
         
-//        setTextField(customTextField: emailAddress, iconName: "UserIcon")
-//        setTextField(customTextField: password, iconName: "Pswlcon")
+
 
     }
     

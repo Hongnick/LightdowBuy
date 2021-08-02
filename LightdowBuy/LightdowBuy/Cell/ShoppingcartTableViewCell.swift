@@ -84,9 +84,7 @@ class ShoppingcartTableViewCell: UITableViewCell {
             let image = ProductController.shared.loadProductImage(with: cartItem.itemImageUrl)
             itemImageView.image = image
             itemNameLabel.text = cartItem.itemName
-            itemPriceLabel.text = "$ \(cartItem.subtotal)"
-//            itemColorLabel.text = cartItem.itemColor
-//            itemSizeLabel.text = "Size: \(cartItem.itemSize)"
+            itemPriceLabel.text = "$ \(cartItem.subtotal)"  
             quantityTextField.text = cartItem.itemQuantity
         }
         

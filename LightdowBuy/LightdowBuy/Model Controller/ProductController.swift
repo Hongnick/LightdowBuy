@@ -52,19 +52,5 @@ struct ProductController {
         let name = productName.components(separatedBy: ",")
         completion(name)
     }
-//    func getProductSize(with selectedSegmentIndex: Int) -> String{
-//        switch selectedSegmentIndex {
-//        case 0:
-//            return "S"
-//        case 1:
-//            return "M"
-//        case 2:
-//            return "L"
-//        case 3:
-//            return "XL"
-//        default:
-//            return ""
-//        }
-//    }
-//
+
 }

@@ -11,7 +11,7 @@ class ProductCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         loadingView = Tool.shared.setLoadingView(in: self, with: loadingView)
         loadCart()
-        loadFavoriteList()
+      
         updateDataSource()
     }
     
@@ -21,7 +21,7 @@ class ProductCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.favoriteList = FavoriteListManager.shared.favoriteList
+
         self.cart = CartManager.shared.shoppingcart
         DispatchQueue.main.async {
             self.collectionView.reloadData()
@@ -74,9 +74,7 @@ class ProductCollectionViewController: UICollectionViewController {
         }
         
     }
-    func loadFavoriteList(){
-        self.favoriteList =  FavoriteListManager.shared.favoriteList 
-    }
+   
 
     func setCellFlowLayout(){
         let itemSpace:CGFloat = 30
@@ -95,18 +93,11 @@ class ProductCollectionViewController: UICollectionViewController {
     }
     
     func configure(for cell: ProductCollectionViewCell, at row: Int) {
-        //先把愛心全清空，避免重複使用的cell亂掉
-      //  cell.productLikeButton.imageView!.image = UIImage(systemName: "heart")!
+
         cell.layer.borderWidth = 0
         cell.layer.borderColor = UIColor.gray.cgColor
         let product =  products[row]
-//        favoriteList.forEach { (favoriteProduct) in
-//            if product.productName == favoriteProduct {
-//                DispatchQueue.main.async {
-//                    cell.productLikeButton.imageView!.image = UIImage(systemName: "heart.fill")!
-//                }
-//            }
-//        }
+
         cell.productImageView.image = ProductController.shared.loadProductImage(with: product.imageUrl)
         cell.productNameTextView.text = product.productName
         cell.productPriceLabel.text = "NT$ \(product.productPrice)"

@@ -38,64 +38,10 @@ class MemberViewController: UIViewController, MFMailComposeViewControllerDelegat
     
     var ref: DatabaseReference!
     
-//    var handle = Auth.auth().addStateDidChangeListener { auth, user in
-//
-//        if Auth.auth().currentUser != nil {
-//          // User is signed in.
-//            if let user = user {
-//              // The user's ID, unique to the Firebase project.
-//              // Do NOT use this value to authenticate with your backend server,
-//              // if you have one. Use getTokenWithCompletion:completion: instead.
-//                let uid = user.uid
-//
-//              //  let name = user.name
-//                let email = user.email
-//            //  let photoURL = user.photoURL
-//              var multiFactorString = "MultiFactor: "
-//              for info in user.multiFactor.enrolledFactors {
-//                multiFactorString += info.displayName ?? "[DispayName]"
-//                multiFactorString += " "
-//              }
-//              // ...
-//            }
-//        } else {
-//          // No user is signed in.
-//          // ...
-//        }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//    }
-//
-  //  var uid = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-//        if let user = Auth.auth().currentUser {
-//           uid = user.uid
-//        }
-        
-//
-//        ref = Database.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
-//        ref.observe(.value, with: { (snapshot) in
-//            let name = snapshot.value as! String
-//            self.nameLabel.text = name
-//        })
-//
-//
-//        ref = Database.database().reference(withPath: "ID/\(self.uid)/Profile/Email")
-//        ref.observe(.value, with: { (snapshot) in
-//            let email = snapshot.value as! String
-//            self.emailLabel.text = email
-//        })
-        
+   
         let currentSignInUser = Auth.auth().currentUser!
         let currentUserID = currentSignInUser.uid
         let query = Firestore.firestore().collection("users").whereField("uid", isEqualTo: currentUserID)
