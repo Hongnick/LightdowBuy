@@ -97,33 +97,17 @@ class LoginViewController: UIViewController {
                 
             }
             else {
-                
-//                let homepageViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.HomePageViewController) as? HomePageViewController
-                
-               // let tabBarViewController = UIStoryboard(name: Constants.Storyboard., bundle: <#T##Bundle?#>)
-              //  window = UIWindow()
-                //self.window = UIWindow()
-//                let navController = UINavigationController(rootViewController: HomePageViewController())
-//
-//
-//
-//              //  self.view.window?.rootViewController = HomePageViewController
-//                self.view.window?.makeKeyAndVisible()
-//                self.window?.rootViewController = navController
+ 
+            
                 let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeVC")
-                   if let navigator = self.navigationController {
-                        navigator.pushViewController(tabBarController, animated: true)
-               }
+                self.view.window?.rootViewController = tabBarController
                 
                 
             }
         }
         
     }
-        
-    
-    
-    
+ 
     func showError(_ message: String) {
         
         errorLabel.text = message
@@ -136,33 +120,15 @@ class LoginViewController: UIViewController {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
                self.view.addGestureRecognizer(tap) // to Replace "TouchesBegan"
-        
-     
-
-        Auth.auth().addStateDidChangeListener { (auth, users) in
-                  if users != nil {
-                      let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeVC")
-                         if let navigator = self.navigationController {
-                              navigator.pushViewController(tabBarController, animated: true)
-                     }
-                  }
-              }
-        
-        
+            
         setUpElements()
         
-        
-        
-        
+    
         //setCorner(customView: loginView, radius: 10)
         setCorner(customView: SignInOutlet, radius: 10)
     }
     
-    
-    
-  
-    
-    
+
     @objc func dismissKeyBoard() {
          self.view.endEditing(true)
      }
