@@ -7,8 +7,6 @@ class ShoppingcartTableViewCell: UITableViewCell {
  
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
-    @IBOutlet weak var itemColorLabel: UILabel!
-    @IBOutlet weak var itemSizeLabel: UILabel!
     @IBOutlet weak var quantityTextField: UITextField!
     var cartItem: CartItem?
     var cart:[CartItem]?
