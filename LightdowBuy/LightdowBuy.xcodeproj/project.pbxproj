@@ -10,6 +10,7 @@
 		0D1A26965B1D959F52DB194B /* Pods_LightdowBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CE983F8261AA8D41269B13 /* Pods_LightdowBuy.framework */; };
 		3F1108A426B3E5890082AEE6 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1108A326B3E5890082AEE6 /* ServiceViewController.swift */; };
 		3F1108A626B67F330082AEE6 /* HomePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1108A526B67F330082AEE6 /* HomePageCollectionViewCell.swift */; };
+		3F6A6FC826BBDA7300AAEF17 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A6FC726BBDA7300AAEF17 /* OrderListViewController.swift */; };
 		3FECBA1A26A4268400A74D96 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECBA1926A4268400A74D96 /* LoginViewController.swift */; };
 		3FECBA1C26A4566F00A74D96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FECBA1B26A4566E00A74D96 /* GoogleService-Info.plist */; };
 		3FF177A626A632240094BD8F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF177A526A632240094BD8F /* SignUpViewController.swift */; };
@@ -45,6 +46,7 @@
 		0F8FEFDE78B2F08CA42236DE /* Pods-LightdowBuy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightdowBuy.release.xcconfig"; path = "Target Support Files/Pods-LightdowBuy/Pods-LightdowBuy.release.xcconfig"; sourceTree = "<group>"; };
 		3F1108A326B3E5890082AEE6 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		3F1108A526B67F330082AEE6 /* HomePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCollectionViewCell.swift; sourceTree = "<group>"; };
+		3F6A6FC726BBDA7300AAEF17 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		3F956AB626B6E39000ECEBE3 /* LightdowBuy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LightdowBuy.entitlements; sourceTree = "<group>"; };
 		3FECBA1926A4268400A74D96 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FECBA1B26A4566E00A74D96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				3FF177CE26A6B4CB0094BD8F /* HomePageViewController.swift */,
 				3FF177D026A6DC430094BD8F /* MemberViewController.swift */,
 				3F1108A326B3E5890082AEE6 /* ServiceViewController.swift */,
+				3F6A6FC726BBDA7300AAEF17 /* OrderListViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94CA669D24F427AE001F0072 /* CartItemController.swift in Sources */,
+				3F6A6FC826BBDA7300AAEF17 /* OrderListViewController.swift in Sources */,
 				94C019C824F0F41100C5195C /* DetailViewController.swift in Sources */,
 				3FF177A826A6461D0094BD8F /* Utilities.swift in Sources */,
 				3FF177D126A6DC430094BD8F /* MemberViewController.swift in Sources */,
@@ -503,6 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LightdowBuy/LightdowBuy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 4SB3FXH5PD;
 				INFOPLIST_FILE = LightdowBuy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -510,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nick.LightdowBuy;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.nick.LightdowBuy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,6 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LightdowBuy/LightdowBuy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 4SB3FXH5PD;
 				INFOPLIST_FILE = LightdowBuy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -532,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nick.LightdowBuy;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.nick.LightdowBuy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
