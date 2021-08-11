@@ -18,6 +18,7 @@ class MemberViewController: UIViewController, MFMailComposeViewControllerDelegat
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var cellphoneLabel: UILabel!
+    var cart = [CartItem]()
     
     @IBAction func logOut(_ sender: UIBarButtonItem) {
         
@@ -26,17 +27,26 @@ class MemberViewController: UIViewController, MFMailComposeViewControllerDelegat
         if Auth.auth().currentUser != nil {
         do {
             try Auth.auth().signOut()
-           dismiss(animated: true, completion: nil)
+          // dismiss(animated: true, completion: nil)
 
         } catch {
             print("User could not sign out.")
         }
 
         self.transitionToHome()
+            
+            func cartClear() {
+                Tool.shared.readUserDefaultData(with: PropertyKeys.cart, and: [CartItem].self) { (cart) in
+                    guard let cart = cart else {return}
+                    CartManager.shared.shoppingcart = []
+                    self.cart = cart
+                }
+                
+            }
     }
 }
     
-    var ref: DatabaseReference!
+    
     
 
     override func viewDidLoad() {
@@ -68,10 +78,9 @@ class MemberViewController: UIViewController, MFMailComposeViewControllerDelegat
     func transitionToHome() {
         
         let LoginViewController =
-            storyboard?.instantiateViewController(identifier: Constants.Storyboard.LoginViewController) as? LoginViewController
-        
+            storyboard?.instantiateViewController(identifier: Constants.Storyboard.LoginViewController)
         view.window?.rootViewController = LoginViewController
-        view.window?.makeKeyAndVisible()
+      
         
     }
     
