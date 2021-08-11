@@ -11,13 +11,22 @@ class ProductCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         loadingView = Tool.shared.setLoadingView(in: self, with: loadingView)
         loadCart()
-      
+        cartClear()
         updateDataSource()
     }
     
     override func viewDidLayoutSubviews() {
        setCellFlowLayout()
     }
+    
+//    func updateDataSource() {
+//        self.cart = CartManager.shared.shoppingcart
+//
+//    }
+//
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -70,6 +79,16 @@ class ProductCollectionViewController: UICollectionViewController {
         Tool.shared.readUserDefaultData(with: PropertyKeys.cart, and: [CartItem].self) { (cart) in
             guard let cart = cart else {return}
             CartManager.shared.shoppingcart = cart
+            self.cart = cart
+        }
+        
+    }
+    
+    
+    func cartClear() {
+        Tool.shared.readUserDefaultData(with: PropertyKeys.cart, and: [CartItem].self) { (cart) in
+            guard let cart = cart else {return}
+            CartManager.shared.shoppingcart = []
             self.cart = cart
         }
         
