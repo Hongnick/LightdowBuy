@@ -40,11 +40,13 @@ class ShoppingcartTableViewController: UITableViewController {
             let data  = try encoder.encode(cart)
             let jsonString = String(data: data, encoding: .utf8)
             let currentSignInUser = Auth.auth().currentUser!.email
-           // let currentSingIncellphone = Auth.auth().currentUser!.
+            let uid = Auth.auth().currentUser!.uid
             
            // let currentUserID = currentSignInUser.displayName
-            db.collection("order").document(orderID).setData(["items":jsonString ?? "", "currentSignInUser":currentSignInUser ?? ""]) { error in
-
+            db.collection("order").document(orderID).setData(["items":jsonString ?? "", "currentSignInUser":currentSignInUser ?? "","uid": uid]) { error in
+                  
+                self.cartClear()
+                self.updateDataSource()
 
 //                let currentSignInUser = Auth.auth().currentUser!
 //                let currentUserID = currentSignInUser.uid
@@ -64,49 +66,7 @@ class ShoppingcartTableViewController: UITableViewController {
 //                                                        let controller = storyboard?.instantiateViewController(withIdentifier: PropertyKeys.shoppingcartController) as! UITableViewController
 //                                                        present(controller, animated: true, completion: nil)
                             }
-                
-//
-               
-                
-                
-                
-//                query.getDocuments() { [weak self] (querySnapshot, err) in
-//                        if let err = err {
-//                            print("Error getting documents: \(err)")
-//                        } else {
-//                            if (querySnapshot?.documents.first) != nil {
-//                                DispatchQueue.main.async {
-//
-//                                    //分辨按鈕
-//                                    if (sender as AnyObject).tag == 0 {
-//                                        Tool.shared.showAlert(in: self!, with: "已送出訂單")
-//
-//
-//
-//
-//
-//                                    }else if (sender as AnyObject).tag == 1 {
-////                                        let controller = storyboard?.instantiateViewController(withIdentifier: PropertyKeys.shoppingcartController) as! UITableViewController
-////                                        present(controller, animated: true, completion: nil)
-//                                    }
-//
-//
-//
-//
-//                                    //    let userID = "CDTQsLFoorAzTZeitiYq"
-//                                 //   self?.db.collection("users").document(currentUserID).setData(["orderID":orderID], merge: true)
-//                                }
-//
-//                            }
-//                        }
-//                }
-//
-//
-                
-                
-                
-                
-                
+                        
           
             }
         }catch {
@@ -215,7 +175,14 @@ extension ShoppingcartTableViewController: ShoppingcartTableViewCellDelegate {
     }
     
     
-    
+    func cartClear() {
+        Tool.shared.readUserDefaultData(with: PropertyKeys.cart, and: [CartItem].self) { (cart) in
+            guard let cart = cart else {return}
+            CartManager.shared.shoppingcart = []
+            self.cart = cart
+        }
+        
+    }
     
     
     

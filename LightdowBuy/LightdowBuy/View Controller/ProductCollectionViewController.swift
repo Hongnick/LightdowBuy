@@ -11,13 +11,22 @@ class ProductCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         loadingView = Tool.shared.setLoadingView(in: self, with: loadingView)
         loadCart()
-      
+        cartClear()
         updateDataSource()
     }
     
     override func viewDidLayoutSubviews() {
        setCellFlowLayout()
     }
+    
+//    func updateDataSource() {
+//        self.cart = CartManager.shared.shoppingcart
+//
+//    }
+//
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -74,12 +83,22 @@ class ProductCollectionViewController: UICollectionViewController {
         }
         
     }
+    
+    
+    func cartClear() {
+        Tool.shared.readUserDefaultData(with: PropertyKeys.cart, and: [CartItem].self) { (cart) in
+            guard let cart = cart else {return}
+            CartManager.shared.shoppingcart = []
+            self.cart = cart
+        }
+        
+    }
    
 
     func setCellFlowLayout(){
         let itemSpace:CGFloat = 30
         let width = floor((collectionView.bounds.width - itemSpace * 3) / 2)
-        let height = width / 140 * 175
+        let height = width / 151 * 185
         guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {return}
         flowLayout.estimatedItemSize = .zero
         flowLayout.itemSize = CGSize(width: width, height: height)

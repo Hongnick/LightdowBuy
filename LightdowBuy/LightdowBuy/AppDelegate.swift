@@ -15,22 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-//        auth.addStateDidChangeListener { [weak self] (_, user) in
-//                if let user = user {
-//                    // user is already logged in
-//                } else {
-//                    // user is not logged in
-//                }
-//            }
-//
-//
-        
-        Thread.sleep(forTimeInterval: 2.0)
-        
-        
-        
-        
+
+        Thread.sleep(forTimeInterval: 1.0)
+     
         window = UIWindow()
         window?.makeKeyAndVisible()
         let navController = UINavigationController(rootViewController: LoginViewController())

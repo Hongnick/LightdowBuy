@@ -32,7 +32,7 @@ struct Tool {
     func writeUserDefault<T>(with key:String, and value: T) where T: Encodable {
         if let data = try? jsonEncoder.encode(value) {
             userDefault.setValue(data, forKey:key)
-print("資料儲存成功")
+       print("資料儲存成功")
         }
     }
     func setLoadingView(in viewController: UIViewController, with loadingView: UIActivityIndicatorView) -> UIActivityIndicatorView{

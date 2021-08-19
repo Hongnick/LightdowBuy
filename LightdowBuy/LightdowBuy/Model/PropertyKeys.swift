@@ -9,7 +9,6 @@ struct PropertyKeys {
     static let footer = "footer"
     
     static let cart = "cart"
-    static let favoriteList = "favoriteList"
     static let shoppingcartController = "ShoppingcartTableViewController"
     static let HomePageCollectionViewCell = ""
  

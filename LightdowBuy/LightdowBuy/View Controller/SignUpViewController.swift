@@ -70,7 +70,7 @@ class SignUpViewController: UIViewController {
         // Check that all fields are filled in
         if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
            // lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+           // emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             cellPhoneTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             
@@ -121,7 +121,7 @@ class SignUpViewController: UIViewController {
                 if err != nil {
                     
                     // There was an error creating the user
-                    self.showError("Email格式錯誤")
+                   // self.showError("Email格式錯誤")
                 }
                 else {
                     
@@ -137,7 +137,8 @@ class SignUpViewController: UIViewController {
                     }
                     
                     // Transition to the home screen
-                    self.transitionToHome()
+                    self.navigationController?.popViewController(animated: true)
+                   
                 }
                 
             }
@@ -155,15 +156,7 @@ class SignUpViewController: UIViewController {
     }
     
     
-    func transitionToHome() {
-        
-        let LoginViewController =
-            storyboard?.instantiateViewController(identifier: Constants.Storyboard.LoginViewController) as? LoginViewController
-        
-        view.window?.rootViewController = LoginViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
+ 
     
    
     
@@ -179,6 +172,6 @@ class SignUpViewController: UIViewController {
 
     @IBAction func Loginbg(_ sender: Any) {
         
-        transitionToHome()
+        self.navigationController?.popViewController(animated: true)
     }
 }
