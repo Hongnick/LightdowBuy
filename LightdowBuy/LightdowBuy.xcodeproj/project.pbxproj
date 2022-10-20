@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D1A26965B1D959F52DB194B /* Pods_LightdowBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CE983F8261AA8D41269B13 /* Pods_LightdowBuy.framework */; };
+		0185AE8F26CE43CA00A14077 /* Pods_LightdowBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CE983F8261AA8D41269B13 /* Pods_LightdowBuy.framework */; };
+		0185AE9026CE43CA00A14077 /* Pods_LightdowBuy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CE983F8261AA8D41269B13 /* Pods_LightdowBuy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F1108A426B3E5890082AEE6 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1108A326B3E5890082AEE6 /* ServiceViewController.swift */; };
 		3F1108A626B67F330082AEE6 /* HomePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1108A526B67F330082AEE6 /* HomePageCollectionViewCell.swift */; };
 		3F6A6FC826BBDA7300AAEF17 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A6FC726BBDA7300AAEF17 /* OrderListViewController.swift */; };
@@ -40,6 +41,20 @@
 		94CA66AA24F8A10C001F0072 /* FooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CA66A924F8A10C001F0072 /* FooterViewCell.swift */; };
 		94EA267424F2028400177B6C /* JsonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA267324F2028400177B6C /* JsonStructure.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0185AE9126CE43CB00A14077 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0185AE9026CE43CA00A14077 /* Pods_LightdowBuy.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		012F4D4C3FF616C8FC8B3317 /* Pods-LightdowBuy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightdowBuy.debug.xcconfig"; path = "Target Support Files/Pods-LightdowBuy/Pods-LightdowBuy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1A26965B1D959F52DB194B /* Pods_LightdowBuy.framework in Frameworks */,
+				0185AE8F26CE43CA00A14077 /* Pods_LightdowBuy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +243,7 @@
 				94C0199224EFF22D00C5195C /* Frameworks */,
 				94C0199324EFF22D00C5195C /* Resources */,
 				7B877E59FB5965F25EB90C48 /* [CP] Embed Pods Frameworks */,
+				0185AE9126CE43CB00A14077 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

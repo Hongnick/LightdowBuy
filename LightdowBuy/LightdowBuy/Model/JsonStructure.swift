@@ -1,6 +1,18 @@
 
 
 import Foundation
+
+
+struct JsonStructure: Codable {
+    var productName: String
+    var productPrice: String
+    var imageUrl: String
+    var numberBeenBought: String
+    var productDescription: String
+   
+}
+
+
 struct JsonStructure: Codable {
     var feed: Feed
 }
@@ -16,14 +28,14 @@ struct Entry: Codable {
     var numberBeenBought: NumberBeenBought
     var productDescription: ProductDescription
     enum CodingKeys: String, CodingKey {
-        case productName = "gsx$productname"
-        case productPrice = "gsx$productprice"
-        case imageUrl = "gsx$imageurl"
-        case numberBeenBought = "gsx$numberbeenbought"
-        case productDescription = "gsx$productdescription"
+        case productName = "productname"
+        case productPrice = "productprice"
+        case imageUrl = "imageurl"
+        case numberBeenBought = "numberbeenbought"
+        case productDescription = "productdescription"
     }
-    
-    
+
+
 }
 
 

@@ -4,8 +4,8 @@ import UIKit
 
 struct ProductController {
     static let shared = ProductController()
-static let jsonUrl =
-    "https://spreadsheets.google.com/feeds/list/12NNkpxROqpOxGRVl1zYrTuZxpYVNYJv7zfbNf4LU3ao/od6/public/values?alt=json"
+    static let jsonUrl = "https://sheetdb.io/api/v1/84u1pvxdpxcrg"
+//    "https://spreadsheets.google.com/feeds/list/12NNkpxROqpOxGRVl1zYrTuZxpYVNYJv7zfbNf4LU3ao/od6/public/values?alt=json"
     
 //    "https://spreadsheets.google.com/feeds/list/19mvppo59kjQ0WwAdBweFYtyXjM2WdIS8tQF5YchDdb4/od6/public/values?alt=json"
     
@@ -16,7 +16,7 @@ static let jsonUrl =
                 print(error?.localizedDescription)
             }
             let decoder = JSONDecoder()
-            if let data = data, let loadeJson = try? decoder.decode(JsonStructure.self, from: data) {
+            if let data = data, let loadeJson = try? decoder.decode(Product.self, from: data) {
                 var products = [Product]()
                 let entry = loadeJson.feed.entry
                 entry.forEach { (entry) in
