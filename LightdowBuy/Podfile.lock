@@ -414,6 +414,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/UserDefaults (~> 7.4)
     - PromisesObjC (< 3.0, >= 1.2)
+  - FittedSheets (2.4.2)
   - GoogleAppMeasurement (8.5.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.5.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
@@ -482,6 +483,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
   - CodableFirebase
@@ -490,6 +492,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Firestore
+  - FittedSheets
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
@@ -504,6 +508,7 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstallations
+    - FittedSheets
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -513,6 +518,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -526,6 +532,7 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 65c3742ed355f9b9db222036fd154e699ab7d672
   FirebaseFirestore: 9aa10de35bb76a5fe40fdf5c858669f0eac88a99
   FirebaseInstallations: f2bc590b291d25fb40a9a05b8281c02a881b5117
+  FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
   GoogleAppMeasurement: 8d10c1c470fcb0e5143ed74fddd164f0a0384800
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleUtilities: eea970f4a389963963bffe8d8fabe43540678b9c
@@ -535,7 +542,8 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 0c41db6317a3f0c4b39b6baa4e75311d4ca8fdcd
+PODFILE CHECKSUM: bd3a962a1d585b5944675b5f45246b71c2d0781d
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

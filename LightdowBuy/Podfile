@@ -12,4 +12,6 @@ target 'LightdowBuy' do
  pod 'Firebase/Firestore'
  pod 'Firebase/Database'
  pod 'CodableFirebase'
+ pod 'youtube-ios-player-helper'
+ pod 'FittedSheets'
 end
