@@ -156,7 +156,7 @@ class ServiceViewController: BaseViewController {
         leftConfiguration.imagePlacement = .leading
         leftConfiguration.background.backgroundColor = .clear
         let leftAction = UIAction { action in
-            print("personalBlog Button tap")
+            print("leftConfiguration Button tap")
         }
     
         
@@ -176,7 +176,7 @@ class ServiceViewController: BaseViewController {
         rightConfiguration.baseForegroundColor = .brown
         rightConfiguration.background.backgroundColor = .clear
         let rightAction = UIAction { action in
-            print("personalBlog Button tap")
+            print("rightConfiguration Button tap")
         }
         
         let rightButton = UIButton(configuration: rightConfiguration, primaryAction: rightAction)
@@ -186,14 +186,7 @@ class ServiceViewController: BaseViewController {
        
         let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
         
-        
-//        let lineSevice = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-//        lineSevice.setTitle("客服", for: .normal)
-//        lineSevice.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-//        lineSevice.setTitleColor(UIColor(hexString: "#C95F2A"), for: .normal)
-//        lineSevice.addTarget(self, action: #selector(lineServiceBtn), for: .touchUpInside)
-//        let rightBarButtonItem = UIBarButtonItem(customView: lineSevice)
-        
+       
         navigationItem.leftBarButtonItem = leftBarButtonItem
         navigationItem.rightBarButtonItem = rightBarButtonItem
 
@@ -208,10 +201,10 @@ class ServiceViewController: BaseViewController {
         
         initMethod()
         logoNavgationBarButtonItem()
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: "CFD9DF")
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "D0CAE2")
   
        
-        navigationController?.view.backgroundColor = UIColor(hexString: "CFD9DF")
+        navigationController?.view.backgroundColor = UIColor(hexString: "D0CAE2")
        
     }
     

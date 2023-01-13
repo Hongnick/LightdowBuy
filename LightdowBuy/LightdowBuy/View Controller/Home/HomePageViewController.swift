@@ -27,7 +27,7 @@ class HomePageViewController: BaseViewController,UIScrollViewDelegate, SFSafariV
         ideaTextView.text = "\n現代人的生活壓力\n社會世代的急速變遷\n在我們重視身體健康的同時\n是否也有看重心靈的健康\n面對生命精彩的光後\n轉面看著身後的影\n接納他\n包容他\n開始一段平衡的旅程"
         ideaTextView.textColor = .black
         ideaTextView.textAlignment = .center
-        ideaTextView.backgroundColor = UIColor(hexString: "DFD19D")
+       // ideaTextView.backgroundColor = UIColor(hexString: "DFD19D")
         ideaTextView.isUserInteractionEnabled = false
        
         ideaTextView.layer.borderColor = UIColor(hexString: "7F8145").cgColor
@@ -236,14 +236,44 @@ class HomePageViewController: BaseViewController,UIScrollViewDelegate, SFSafariV
     ]
 
   
+    func logoNavgationBarButtonItem() {
+        
+        
+        var configuration = UIButton.Configuration.filled()
+        var title = AttributedString("光影藝術治療")
+        title.font = UIFont(name: "AmericanTypewriter-Bold", size: 17)
+        configuration.attributedTitle = title
+        configuration.image = AppImage.image(image: .lightdowBuyLogo)
+        configuration.baseForegroundColor = .black
+        configuration.imagePlacement = .leading
+        configuration.background.backgroundColor = .clear
+        let action = UIAction { action in
+            print("personalBlog Button tap")
+        }
+    
+        
+        let logoButton = UIButton(configuration: configuration, primaryAction: action)
+        
+        logoButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        
+        logoButton.setImage(UIImage(named: "LightdowBuylogo44"), for: .normal)
+        let leftBarButtonItem = UIBarButtonItem(customView: logoButton)
+        
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+      
+
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
    
         initMethod()
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: "CFD9DF")
+        logoNavgationBarButtonItem()
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "D0CAE2")
         
-   
+        view.backgroundColor = .white
    
     }
     
